@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>Hello World!</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <h1>
+          ぼくらの推し事
+        </h1>
+        <ul>
+          <li><button id="mogumo" onclick="mogbtn()">もぐも</button></li>
+          <li><button id="yacchi-" onclick="yachibtn()">やっちー</button></li>
+          <li> <button id="amiba" onclick="amibtn()">あみば</button></li>
+          <li><button id="meiry" onclick="meibtn()">めいりー</button></li>
+        </ul>
+      </header>
+
+      <main>
+        <h2 class="recommend">やっちーのおすすめ</h2>
+        
+        <div class ="box">
+          <div class ="artist">
+            <h2 class ="name">藤井風</h2>
+            <img src ="https://cdn.glitch.global/918393f5-9fc5-4e8c-860b-92334a5a9ad7/egoist3.jpg?v=1695485914732">
+          </div>
+         
+        <div class ="topic">
+          <section>
+            <h3>おすすめの曲</h3>
+              <p>名前のない怪物 『PSYCO-PASS サイコパス』ED</p>
+              <p>Welcome to the fam*</p>
+          </section>
+          
+          <section>
+            <h3>最近の活動</h3>
+              <p class ="live">EGOIST LIVE 2023</p>
+              <p>Fleeting Ruby “The Crescendo”0923 OSAKA</p>
+              <p>Resonant Indigo “Echoes of Everlasting”1009 YOKOHAMA</p>
+              <p>※上記ライブをラストライブとし、活動終了を発表。<br>
+                  10/9はぜひニコニコ生放送ででライブを見よう！<br>(タイムシフトあり)</p>
+            </section>
+          
+          <section>
+            <h3>推しポイント</h3>
+              <p>
+                アニメから生まれた架空のアーティストグループ。<br>
+                放送終了後もコンセプトに沿った音楽活動をしている。<br>
+                LIVEでは3DCGを利用した演出でキャラがスクリーンに表示される。<br>
+                ボーカルのchellyさんの動きがリアルタイムでキャラに反映されるが、<br>
+                モーションが止まってしまうアクシデントがややある(醍醐味)<br>
+                歌っている最中とMCのギャップがてえてえ<br>
+                リアルになったキャラデザインもとても好みです
+              </p>
+            </section>
+          
+          </div>
+        </div>
+      </main>
+      <footer>
+        <button id = "scroll_to_top" onclick="scroll_to_top()">
+          topに戻る
+        </button>
+        <p>
+          @team7
+        </p>
+      </footer>
+  </body>
+</html>
