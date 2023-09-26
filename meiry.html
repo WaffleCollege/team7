@@ -58,6 +58,23 @@
                飾らず、正直で親しみやすい人柄もチャーミングでかわいらしい！！！
               </p>
           </section>
+          <section>
+            <h3>💖ボタンを押すとおすすめのアデルの曲がでてきます！！！💖</h3>
+            <button id="reccomendButton" type="button">クリックしてみてください🐈</button>
+            <div id="recommend_contents">
+              <p>あなたへのおすすめは...</p>
+              <h2 id="text"></h2>
+              <iframe
+                id="mv"
+                src=""
+                width="300"
+                height="225"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </section>        
 
         </div>
       </div>
@@ -70,5 +87,51 @@
           @team7
         </p>
       </footer>
+      <script>
+        function randomMV() {
+          const mvUrls = [
+            "https://www.youtube.com/embed/08DjMT-qR9g",
+            "https://www.youtube.com/embed/jb5g4UFHmfQ?",
+            "https://www.youtube.com/embed/0put0_a--Ng?list=RD08DjMT-qR9g",
+            "https://www.youtube.com/embed/tQw1_sX9ipc?list=RD08DjMT-qR9g",
+            "https://www.youtube.com/embed/hLQl3WQQoQ0",
+            "https://www.youtube.com/embed/a1IuJLebHgM",
+            "https://www.youtube.com/embed/Ri7-vnrJD3k",
+            "https://www.youtube.com/embed/3SojhAemf34",      
+            "https://www.youtube.com/embed/_dlExeOyFh4",
+            "https://www.youtube.com/embed/oPmMUZbnc3o",
+            "https://www.youtube.com/embed/X-yIEMduRXk",
+            "https://www.youtube.com/embed/rYEDA3JcQqw"
+          ];
+          const songTitles = [
+          "Chasing Pavements", 
+          "All I Ask", 
+          "Make You Feel My Love (cover)", 
+          "Don't You Remember",
+          "Someone Like You",
+          "When We Were Young", 
+          "Set Fire To The Rain",
+          "Turning Tables",
+          "To Be Loved",
+          "Love Is A Game",
+          "Easy On Me",
+          "Rolling in the Deep",
+          ];
+          let random_num = Math.floor(Math.random() * mvUrls.length);
+          let resultText = songTitles[random_num];
+          let resultMV = mvUrls[random_num];
+          const iframe = document.getElementById("mv");
+          iframe.src = resultMV;
+          console.log(resultMV);
+          document.getElementById("text").textContent = "✨" + resultText + "✨";
+        }
+      
+        let recommendButton = document.getElementById("reccomendButton");
+      
+        recommendButton.onclick = () => {
+          randomMV();
+        };
+      </script>              
+        
   </body>
 </html>
