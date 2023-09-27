@@ -19,7 +19,7 @@
 
     <!-- The website stylesheet -->
     <link rel="stylesheet" href="/stylemog.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css"/>
     <!-- The website JavaScript file -->
     <script src="/script.js" defer></script>
   </head>
@@ -43,7 +43,20 @@
       <div class ="box">
         <div class ="artist">
           <h2 class ="name">EGOIST</h2>
-          <img src ="https://cdn.glitch.global/918393f5-9fc5-4e8c-860b-92334a5a9ad7/egoist3.jpg?v=1695485914732" width="70%">
+          
+          <div id="my-keen-slider" class="keen-slider">
+            <div class="keen-slider__slide" style="min-width: 964px; max-width: 964px transform:translate3d(-964px, 0px, 0px);">
+              <img src ="https://cdn.glitch.global/918393f5-9fc5-4e8c-860b-92334a5a9ad7/egoist3.jpg?v=1695485914732" alt="party">
+            </div>
+            <div class="keen-slider__slide" style="min-width: 964px; max-width: 964px transform:translate3d(-964px, 0px, 0px);">
+              <img src ="https://cdn.glitch.global/918393f5-9fc5-4e8c-860b-92334a5a9ad7/egoist5.png?v=1695801832306" alt="party">
+            </div>
+            <div class="keen-slider__slide" style="min-width: 964px; max-width: 964px transform:translate3d(-964px, 0px, 0px);">
+              <img src ="https://cdn.glitch.global/918393f5-9fc5-4e8c-860b-92334a5a9ad7/egoist6.jpg?v=1695801552100" alt="party">
+            </div>
+          </div>
+          
+          
           <h2 style="font-size: 20px">
            おすすめ動画 
           </h2>
@@ -64,7 +77,8 @@
             <p>Fleeting Ruby “The Crescendo”0923 OSAKA</p>
             <p>Resonant Indigo “Echoes of Everlasting”1009 YOKOHAMA</p>
             <p>※上記ライブをラストライブとし、活動終了を発表。<br>
-                10/9はぜひニコニコ生放送ででライブを見よう！<br>(タイムシフトあり)</p>
+                <span>10/9はぜひニコニコ生放送ででライブを見よう！</span><br>(タイムシフトあり)</p>
+          <a href="https://dwango-ticket.jp/project/LlwNOk4ZTt">EGOIST LIVE ドワンゴチケット</a>
           </section>
         
         <section>
@@ -75,7 +89,7 @@
               LIVEでは3DCGを利用した演出でキャラがスクリーンに表示される。<br>
               ボーカルのchellyさんの動きがリアルタイムでキャラに反映されるが、<br>
               モーションが止まってしまうアクシデントがややある(醍醐味)<br>
-              歌っている最中とMCのギャップがてえてえ<br>
+              <span>歌っている最中とMCのギャップがてえてえ</span><br>
               リアルになったキャラデザインもとても好みです
             </p>
           </section>
@@ -91,5 +105,27 @@
         @team7
       </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+<script>
+    let sliderElement = document.getElementById("my-keen-slider")
+    let interval = 0
+    function autoplay(run) {
+        clearInterval(interval)
+        interval = setInterval(() => {
+            if (run && slider) {
+                slider.next()
+            }
+        }, 2000)
+    }
+
+    let slider = new KeenSlider(sliderElement, {
+        loop: true,
+        duration: 1200,
+        // 最初に自動再生をONにする
+        created: () => {
+            autoplay(true)
+        },
+    })
+</script>
   </body>
 </html>
