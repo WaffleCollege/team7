@@ -14,7 +14,7 @@ body{
     list-style: none;
   }
   
-  button{
+  header button{
     padding: 0px;
     margin: 0px;
     width: 25%;
@@ -22,6 +22,10 @@ body{
     float: left;
     font-size: 20px;
     font-weight: bold;
+  }
+  
+  .adeleBtn button{
+    text-align: center;
   }
   
   main{
